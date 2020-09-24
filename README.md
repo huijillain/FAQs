@@ -1,2 +1,2 @@
-# TravelAgentWebsite
-JS, Pug, MongoDB database
+# FAQ
+
