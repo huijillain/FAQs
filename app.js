@@ -1,0 +1,70 @@
+// we can find port number in bin/www
+
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+var indexRouter = require('./routes/index');
+var aboutRouter = require('./routes/about')
+var registerRouter = require('./routes/register')
+var contactusRouter = require('./routes/contactus');
+var logedinuserRouter = require('./routes/logedinuser');
+var contactRouter = require('./routes/contact');
+var packagesRouter = require('./routes/packages');
+var bookingRouter = require('./routes/booking');
+var usersRouter = require('./routes/users');
+var privateRouter = require('./routes/private');  // A page that is displaied only to logged in users
+const configPassport = require('./configure_passport');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public'),
+  {
+    extensions: ["html", "jpg"]
+  }));
+
+// **************  Authentication
+configPassport(app);
+// ************* End Authontiction *****
+
+app.use('/', indexRouter);                    //as long as '/' is opened, will go to '/index', if // hide this line
+app.use('/contactus', contactusRouter);           // when click localhost:3300, will be a html page, not words
+app.use('/users', usersRouter);
+app.use('/private', privateRouter); // Example page needes user login first
+app.use('/about', aboutRouter); 
+app.use('/booking', bookingRouter); 
+app.use('/contact', contactRouter); 
+app.use('/logedinuser', logedinuserRouter); 
+app.use('/packages', packagesRouter); 
+app.use('/register', registerRouter); 
+
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+module.exports = app;
+
+// we can find port number in bin/www

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="./stylesheets/registerstylesheet.css" link rel="stylesheet">
+    <script src="js/register.js"></script>
+    <script src="js/password.js"></script>
+  <link href="./stylesheets/logedinuser.css" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logogry.png" alt="logo" title="Logo">
+            </a>
+            <h2>Sweetpea Travel's</h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="register.html">Register</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    </div>
+    <div class="container">
+        <form name="myForm" action="/registerdata" onsubmit="return validateForm()" method="GET">
+
+            <!------ Include the above in your HEAD tag ---------->
+
+            <div class="container emp-profile">
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="profile-img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog"
+                                    alt="" />
+                                <div class="file btn btn-lg btn-primary">
+                                    Change Photo
+                                    <input type="file" name="file" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    <div class="container">
+        <div id="error"></div>
+                        <form id="form" name="f" class="form-inline" method="GET" action="/register">
+                            <label for='userId'>User Id: </label>
+                                    <input type="text" required id='userId' name='userId' value = "currentUser._id" placeholder="userId" class='form-control' required>
+                            <label for='username'>User Name: </label>
+                                    <input type="text" required id='username' name='username' placeholder="Username" class='form-control' required>
+                            <label for='firstname'>First Name: </label>
+                                    <input type="text" required id='CustFirstName' name='CustFirstName' placeholder="First Name" class='form-control'>                               
+                            <label for='lastname'>Last Name: </label>
+                                    <input type="text" required id='CustLastName' name='CustLastName' placeholder="Last Name" class='form-control'>
+                            <label for='fname'>Address: </label>
+                                    <input type="text" id='Address' name='CustAddress' placeholder="Address" class='form-control'>
+                            <label for='city'>City: </label>
+                                    <input type="text" id='city' name='CustCity' placeholder="City" class='form-control'>
+                            <label for='province'>Province: </label>
+                                    <input type="text" id='province' name='province' placeholder="Province" class='form-control'>
+                            <label for='home phone'>Home phone: </label>
+                                    <input type="text" id='CustHomePhone' name='CustHomePhone' placeholder="home phone" class='form-control'>
+                            <label for='business phoone'>Business Phone: </label>
+                                    <input type="text" id='CustBusPhone' name='CustBusPhone' placeholder="business phone" class='form-control'>
+                            <label for='password'>Password: </label>
+                                    <input type="text" id='CustPassword' name='CustPassword' placeholder="Current Password" class='form-control'>
+                            <label for='password'>Confirm Password: </label>
+                                    <input type="password" id='CPassword' name='cpass' placeholder="Confirm Password" class='form-control'>
+                                    <input type="button" name='btn' value="checkpassword()">
+                                  <button id='saveData' style='display:none' class='btn btn-warning btn-block'>Save</button> 
+                                    <!--<button type='submit' class='btn btn-warning btn-block'>Save</button> -->
+                                </form> 
+                            </div>
+
+                                                         
+                                <div class="offset-4 col-8">
+                                  <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                                </div>
+                             
+		        
+        </form>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="col-12">
+            <div class="font-weight-bold">
+                <h5>&copy; Sweetpea Travel's</h5>
+            </div>
+    </footer>
+
+</body>
+
+</html>
