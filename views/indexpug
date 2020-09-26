@@ -1,0 +1,10 @@
+extends layout                          
+
+block content
+  p Welcome to ABC Travel Experts!                                                
+  h2
+  | Go to our 
+  a(href='/private') Private
+  |  page after you login
+
+  
